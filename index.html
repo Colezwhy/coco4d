@@ -71,13 +71,13 @@
                     </div>
             
                       <div class="text-center">
-                        <span class="author-block"><sup>1</sup>Huazhong University of Science and Technology</span>
-                        <span class="author-block"><sup>2</sup>NVIDIA</span>
+                        <span class="author-block" style="font-size: 30px;"><sup>1</sup>Huazhong University of Science and Technology</span>
+                        <span class="author-block" style="font-size: 30px;"><sup>2</sup>NVIDIA</span>
                         <!-- <p></p> -->
                       </div>
                         <div class="text-center">
-                        <span class="author-block"><sup>3</sup>UC Merced</span>
-                        <span class="author-block"><sup>4</sup>Yonsei University</span>
+                        <span class="author-block" style="font-size: 30px;"><sup>3</sup>UC Merced</span>
+                        <span class="author-block" style="font-size: 30px;"><sup>4</sup>Yonsei University</span>
                     </div>
                 </div>
             </div>
@@ -110,14 +110,14 @@
             </div>
         </div>
     </div> -->
-    <div class="container" style="max-width: 1200px;">
+    <div class="container" style="max-width: 1000px;">
         <div class="row captioned_videos">
         <div class="col-6">
             <div class="video-compare-container" style="width: 100%">
                 <video class="video lazy" loop playsinline autoplay muted style="width: 100%">
                     <source data-src="videos/squirrel.mp4" type="video/mp4"></source>
                 </video>
-                <h6 class="caption">A squirrel standing on a box.</h6>
+                <h3 class="caption">A squirrel standing on a box.</h3>
             </div>
             
         </div>
@@ -126,7 +126,7 @@
                 <video class="video lazy" loop playsinline autoplay muted style="width: 100%">
                     <source data-src="videos/pigeon.mp4" type="video/mp4"></source>
                 </video>
-                <h6 class="caption">A pigeon having a bagel and beer.</h6>
+                <h3 class="caption">A pigeon having a bagel and beer.</h3>
             </div>
             
         </div>
@@ -136,7 +136,7 @@
                 <video class="video lazy" loop playsinline autoplay muted style="width: 100%">
                     <source data-src="videos/crocodile.mp4" type="video/mp4"></source>
                 </video>
-                <h6 class="caption">A cute stuffed toy crocodile and a small stuffed toy rabbit on a skateboard. <br> (User provided 2D layout)</h6>
+                <h3 class="caption">A cute stuffed toy crocodile and a small stuffed toy rabbit on a skateboard. <br> (User provided 2D layout)</h3>
             </div>
         </div>
 
@@ -145,7 +145,7 @@
                 <video class="video lazy" loop playsinline autoplay muted style="width: 100%">
                     <source data-src="videos/crocodile_llm.mp4" type="video/mp4"></source>
                 </video>
-                <h6 class="caption">A cute stuffed toy crocodile and a small stuffed toy rabbit on a skateboard. <br> (LLM generated 2D layout)</h6>
+                <h3 class="caption">A cute stuffed toy crocodile and a small stuffed toy rabbit on a skateboard. <br> (LLM generated 2D layout)</h3>
             </div>
         </div>
     </div>
@@ -153,7 +153,7 @@
 
     <hr class="divider" />
 
-    <div class="container" style="max-width: 1200px;">
+    <div class="container" style="max-width: 1000px;">
         <div class="row">
             <div class="col-md-12">
                 <h2>Abstract</h2>
@@ -163,7 +163,7 @@
             </div>
         </div>
     </div>
-    <div class="container" style="max-width: 1200px;">
+    <div class="container" style="max-width: 1000px;">
         <div class="row captioned_videos">
             <div class="col-md-12">
                 <img src="sources/teaser.png" alt="architecture" style="width: 100%">
@@ -174,12 +174,12 @@
     
 
     <hr class="divider" />
-    <div class="container" style="max-width: 1200px;">
+    <div class="container" style="max-width: 1000px;">
         <div class="row">
             <div class="col-md-12">
                 <h2>Proposed Framework & Method </h2>
                 <p> Given a 2D layout and text prompt, our coarse 3D generation stage (green box) generates coarse 3D instances along with roughly reasonable layouts. The disentangled refinement stage then refines the 3D layout and enhances individual instance quality by leveraging a collision-aware layout refinement (blue box) followed by an instance-wise refinement (yellow box).</p>
-                <div class="container" style="max-width: 1200px;">
+                <div class="container" style="max-width: 1000px;">
                     <div class="row">
                         <div class="col-md-12">
                         <img src="sources/pipeline.png" alt="architecture" style="width: 100%">
@@ -193,13 +193,13 @@
     <br><br>
                 
     <hr class="divider" />
-    <div class="container" style="max-width: 1200px;">
+    <div class="container" style="max-width: 1000px;">
         <div class="row">
             <div class="col-sm-12">
                 <h2>Video</h2>
             </div>
 
-            <div class="container" style="max-width: 1200px;">
+            <div class="container" style="max-width: 1000px;">
                 <div class="row captioned_videos">
                     <div class="col-md-12">
                         <div style="position:relative;padding-top:56.25%;">
@@ -212,7 +212,7 @@
     </div>
 
     <hr class="divider" />
-    <div class="container" style="max-width: 1200px;">
+    <div class="container" style="max-width: 1000px;">
         <div class="row">
             <div class="col-sm-12">
                 <h2>Experiments & Main Results</h2>
@@ -220,7 +220,7 @@
         </div>
 
 
-        <div class="container" style="max-width: 1200px;">
+        <div class="container" style="max-width: 1000px;">
             <div class="row captioned_videos">
                 <div class="col-md-12">
                     <p> We evaluate the proposed method make comparisons with other SOTA text-to-3D methods on our collected Compo20 validation set. Layout-Your-3D can generate compositional 3D scenes with higher quality and more reasonable 3D layouts. Note that the first two rows of our results are generated with LLM-grounded 2D layouts, and the last two are generated with user-given 2D layouts. </p>
@@ -231,7 +231,7 @@
 
         <br><br>
 
-        <div class="container" style="max-width: 1200px;">
+        <div class="container" style="max-width: 1000px;">
             <div class="row captioned_videos">
                 <div class="col-md-12">
                     <p> Comparison on the quality of single 3D instance generation. We provide both the short and extended strategy. When lengthening the optimization process, our Layout-Your-3D can generate comparable or even better results than SOTA text-to-3D methods.</p>
@@ -242,7 +242,7 @@
 
         <br><br>
 
-        <div class="container" style="max-width: 1200px;">
+        <div class="container" style="max-width: 1000px;">
             <div class="row captioned_videos">
                 <div class="col-md-12">
                     <p> Examples on the 3D instances refined with custom text prompts. We conduct experiments on both the longer and shorter refinement strategies to validate the effectiveness of customization. </p>
@@ -254,7 +254,7 @@
         
         <br><br>
 
-        <div class="container" style="max-width: 1200px;">
+        <div class="container" style="max-width: 1000px;">
             <div class="row captioned_videos">
                 <div class="col-md-12">
                     <p> Since 3D results are closely related to the reference image, incorporating object insertion into our pipeline would be straightforward. </p>
@@ -265,7 +265,7 @@
     </div>
 
     <hr class="divider" />
-    <div class="container" style="max-width: 1200px;">
+    <div class="container" style="max-width: 1000px;">
         <div class="row">
             <div class="col-sm-12">
                 <h2>More generated compositional samples</h2>
@@ -278,7 +278,7 @@
                     <video class="video lazy" loop playsinline autoplay muted style="width: 100%">
                         <source data-src="videos/bear_hd.mp4" type="video/mp4"></source>
                     </video>
-                    <h6 class="caption">A teddy bear reading a book wearing blue sunglasses.</h6>
+                    <h3 class="caption">A teddy bear reading a book wearing blue sunglasses.</h3>
                 </div>
                 
             </div>
@@ -287,7 +287,7 @@
                     <video class="video lazy" loop playsinline autoplay muted style="width: 100%">
                         <source data-src="videos/kitten.mp4" type="video/mp4"></source>
                     </video>
-                    <h6 class="caption">A kitten lying next to a flower.</h6>
+                    <h3 class="caption">A kitten lying next to a flower.</h3>
                 </div>
                 
             </div>
@@ -299,7 +299,7 @@
                     <video class="video lazy" loop playsinline autoplay muted style="width: 100%">
                         <source data-src="videos/hamburger.mp4" type="video/mp4"></source>
                     </video>
-                    <h6 class="caption">A blue bird standing on top of a hamburger.</h6>
+                    <h3 class="caption">A blue bird standing on top of a hamburger.</h3>
                 </div>
             </div>
 
@@ -308,7 +308,7 @@
                     <video class="video lazy" loop playsinline autoplay muted style="width: 100%">
                         <source data-src="videos/pyramid.mp4" type="video/mp4"></source>
                     </video>
-                    <h6 class="caption">A tray on top of a toy pyramid, on the tray is a red bottle, a toy panda and an apple</h6>
+                    <h3 class="caption">A tray on top of a toy pyramid, on the tray is a red bottle, a toy panda and an apple</h3>
                 </div>
             </div>
 
@@ -319,12 +319,12 @@
     
 
     <hr class="divider" />
-    <div class="container" style="max-width: 1200px;">
+    <div class="container" style="max-width: 1000px;">
         <div class="row">
             <div class="col-md-12">
                 <h2> More visualization results. </h2>
                 <h3> Single 3D object generation. </h3>
-                <div class="container" style="max-width: 1200px;">
+                <div class="container" style="max-width: 1000px;">
                     <div class="row">
                         <div class="col-md-12">
                         <img src="sources/appendix_instancegen.png" alt="architecture" style="width: 100%">
@@ -336,7 +336,7 @@
         </div>
     </div>
 
-    <div class="container" style="max-width: 1200px;">
+    <div class="container" style="max-width: 1000px;">
         <div class="row">
             <div class="col-sm-12">
                 <h3>Custom 3D scene generation.</h2>
@@ -348,7 +348,7 @@
                 <video class="video lazy" loop playsinline autoplay muted style="width: 100%">
                     <source data-src="videos/pigeon.mp4" type="video/mp4"></source>
                 </video>
-                <h6 class="caption">A pigeon having a bagel and a beer. (original text prompt)</h6>
+                <h3 class="caption">A pigeon having a bagel and a beer. (original text prompt)</h3>
                 </div>
             </div>
 
@@ -357,13 +357,13 @@
                 <video class="video lazy" loop playsinline autoplay muted style="width: 100%">
                     <source data-src="videos/custom.mp4" type="video/mp4"></source>
                 </video>
-                <h6 class="caption">
+                <h3 class="caption">
                     <span style="color: blue;">[A blue origami pigeon]
                     <span style="color: black;"> having 
                     <span style="color: green;">[a bagel made out of grass]
                     <span style="color: black;"> and 
                     <span style="color: red;">[a beer on fire].
-                </h6>
+                </h3>
                 </div>
             </div>
         </div>
@@ -374,7 +374,7 @@
     
 
     <hr class="divider" />
-    <div class="container" style="max-width: 1200px;">
+    <div class="container" style="max-width: 1000px;">
         <div class="row">
             <div class="col-sm-12">
                 <h2>BibTeX</h2>
@@ -396,7 +396,7 @@
 
 
 
-    <div class="container" style="max-width: 1200px;">
+    <div class="container" style="max-width: 1000px;">
         <footer>
             <p> Website template from <a href="https://dreamfusion3d.github.io/">DreamFusion</a>. We thank the authors for the open-source code.</p>
         </footer>
