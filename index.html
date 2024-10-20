@@ -42,6 +42,12 @@
         }
       </style>
 
+    <style>
+        p {
+            font-size: 18px;
+        }
+    </style>
+
 </head>
 
 
@@ -157,9 +163,9 @@
         <div class="row">
             <div class="col-md-12">
                 <h2>Abstract</h2>
-                <h3>
+                <p>
                     We present Layout-Your-3D, a framework that allows controllable and compositional 3D generation from text prompts. Existing text-to-3D methods often struggle to generate assets with plausible object interactions or require tedious optimization processes. To address these challenges, our approach leverages 2D layouts as a blueprint to facilitate precise and plausible control over 3D generation. Starting with a 2D layout provided by a user or generated from a text description, we first create a coarse 3D scene using a carefully designed initialization process based on efficient reconstruction models. To enforce coherent global 3D layouts and enhance the quality of instance appearances, we propose a collision-aware layout optimization process followed by instance-wise refinement. Experimental results demonstrate that Layout-Your-3D yields more reasonable and visually appealing compositional 3D assets while significantly reducing the time required for each prompt. Additionally, Layout-Your-3D can be easily applicable to downstream tasks, such as 3D editing and object insertion.
-                </h3>
+                </p>
             </div>
         </div>
     </div>
@@ -178,7 +184,7 @@
         <div class="row">
             <div class="col-md-12">
                 <h2>Proposed Framework & Method </h2>
-                <h3> Given a 2D layout and text prompt, our coarse 3D generation stage (green box) generates coarse 3D instances along with roughly reasonable layouts. The disentangled refinement stage then refines the 3D layout and enhances individual instance quality by leveraging a collision-aware layout refinement (blue box) followed by an instance-wise refinement (yellow box).</h3>
+                <p> Given a 2D layout and text prompt, our coarse 3D generation stage (green box) generates coarse 3D instances along with roughly reasonable layouts. The disentangled refinement stage then refines the 3D layout and enhances individual instance quality by leveraging a collision-aware layout refinement (blue box) followed by an instance-wise refinement (yellow box).</p>
                 <div class="container" style="max-width: 1000px;">
                     <div class="row">
                         <div class="col-md-12">
@@ -223,7 +229,7 @@
         <div class="container" style="max-width: 1000px;">
             <div class="row captioned_videos">
                 <div class="col-md-12">
-                    <h3> We evaluate the proposed method make comparisons with other SOTA text-to-3D methods on our collected Compo20 validation set. Layout-Your-3D can generate compositional 3D scenes with higher quality and more reasonable 3D layouts. Note that the first two rows of our results are generated with LLM-grounded 2D layouts, and the last two are generated with user-given 2D layouts. </h3>
+                    <p> We evaluate the proposed method make comparisons with other SOTA text-to-3D methods on our collected Compo20 validation set. Layout-Your-3D can generate compositional 3D scenes with higher quality and more reasonable 3D layouts. Note that the first two rows of our results are generated with LLM-grounded 2D layouts, and the last two are generated with user-given 2D layouts. </p>
                     <img src="sources/comp_main.png" alt="architecture" style="width: 100%">
                 </div>
             </div>
@@ -234,7 +240,7 @@
         <div class="container" style="max-width: 1000px;">
             <div class="row captioned_videos">
                 <div class="col-md-12">
-                    <h3> Comparison on the quality of single 3D instance generation. We provide both the short and extended strategy. When lengthening the optimization process, our Layout-Your-3D can generate comparable or even better results than SOTA text-to-3D methods.</h3>
+                    <p> Comparison on the quality of single 3D instance generation. We provide both the short and extended strategy. When lengthening the optimization process, our Layout-Your-3D can generate comparable or even better results than SOTA text-to-3D methods.</p>
                     <img src="sources/instance_comp.png" alt="architecture" style="width: 100%">
                 </div>
             </div>
@@ -245,7 +251,7 @@
         <div class="container" style="max-width: 1000px;">
             <div class="row captioned_videos">
                 <div class="col-md-12">
-                    <h3> Examples on the 3D instances refined with custom text prompts. We conduct experiments on both the longer and shorter refinement strategies to validate the effectiveness of customization. </h3>
+                    <p> Examples on the 3D instances refined with custom text prompts. We conduct experiments on both the longer and shorter refinement strategies to validate the effectiveness of customization. </p>
                     <img src="sources/ablation_customization_a.png" alt="architecture" style="width: 100%">
                     <img src="sources/ablation_customization_b.png" alt="architecture" style="width: 100%">
                 </div>
@@ -257,7 +263,7 @@
         <div class="container" style="max-width: 1000px;">
             <div class="row captioned_videos">
                 <div class="col-md-12">
-                    <h3> Since 3D results are closely related to the reference image, incorporating object insertion into our pipeline would be straightforward. </h3>
+                    <p> Since 3D results are closely related to the reference image, incorporating object insertion into our pipeline would be straightforward. </p>
                     <img src="sources/object_insertion.png" alt="architecture" style="width: 100%">
                 </div>
             </div>
@@ -269,7 +275,7 @@
         <div class="row">
             <div class="col-sm-12">
                 <h2>More generated compositional samples</h2>
-                <h3>More compositional 3D scenes generated by our Layout-Your-3D.</h3>
+                <p>More compositional 3D scenes generated by our Layout-Your-3D.</p>
             </div>
         </div>
         <div class="row captioned_videos">
@@ -323,7 +329,7 @@
         <div class="row">
             <div class="col-md-12">
                 <h2> More visualization results. </h2>
-                <h3> Single 3D object generation. </h3>
+                <p> Single 3D object generation. </p>
                 <div class="container" style="max-width: 1000px;">
                     <div class="row">
                         <div class="col-md-12">
@@ -339,7 +345,7 @@
     <div class="container" style="max-width: 1000px;">
         <div class="row">
             <div class="col-sm-12">
-                <h3>Custom 3D scene generation.</h3>
+                <p>Custom 3D scene generation.</p>
             </div>
         </div>
         <div class="row captioned_videos">
@@ -398,7 +404,7 @@
 
     <div class="container" style="max-width: 1000px;">
         <footer>
-            <h3> Website template from <a href="https://dreamfusion3d.github.io/">DreamFusion</a>. We thank the authors for the open-source code.</h3>
+            <p> Website template from <a href="https://dreamfusion3d.github.io/">DreamFusion</a>. We thank the authors for the open-source code.</p>
         </footer>
     </div>
     <script src="https://polyfill.io/v3/polyfill.js?features=IntersectionObserver"></script>
