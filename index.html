@@ -54,14 +54,14 @@
 <body>
 
     <div class="highlight-clean" style="padding-bottom: 10px;">
-        <div class="container" style="max-width: 1400px; margin-bottom: 40px;">
+        <div class="container" style="max-width: 1000px; margin-bottom: 40px;">
             <h1 class="text-center " style="color: #65155c;"><b>CoCo4D: Comprehensive and Complex 4D Scene Generation</b></h1>
         </div>
         <!-- <div class="container" style="max-width: 1400px; margin-bottom: 30px;">
             <h1 class="text-center"><b> ICLR 2025
         </div> -->
 
-        <div class="container" style="max-width: 1400px; margin-bottom: 30px;">
+        <div class="container" style="max-width: 1000px; margin-bottom: 30px;">
             <div class="row authors">
                 <div class="col">
                     <!-- <h5 class="text-center" style="text-align: center">Authors anonymized</h5> -->
@@ -106,50 +106,30 @@
             </div>
     </div>
 
-    <div class="container" style="max-width: 1200px;">
+    <div class="container" style="max-width: 800px;">
         <div class="row captioned_videos">
         <div class="col-6">
             <div class="video-compare-container" style="width: 100%">
                 <video class="video lazy" loop playsinline autoplay muted style="width: 100%">
-                    <source data-src="videos/squirrel.mp4" type="video/mp4"></source>
+                    <source data-src="videos/cherry.mp4" type="video/mp4"></source>
                 </video>
-                <h4 class="caption">A squirrel standing on a box.</h4>
+                <h4 class="caption">An anime girl walking in a cherry blossom scene.</h4>
             </div>
-            
         </div>
         <div class="col-6">
             <div class="video-compare-container" style="width: 100%">
                 <video class="video lazy" loop playsinline autoplay muted style="width: 100%">
-                    <source data-src="videos/pigeon.mp4" type="video/mp4"></source>
+                    <source data-src="videos/firework.mp4" type="video/mp4"></source>
                 </video>
-                <h4 class="caption">A pigeon having a bagel and beer.</h4>
-            </div>
-            
-        </div>
-
-        <div class="col-6">
-            <div class="video-compare-container" style="width: 100%">
-                <video class="video lazy" loop playsinline autoplay muted style="width: 100%">
-                    <source data-src="videos/crocodile.mp4" type="video/mp4"></source>
-                </video>
-                <h4 class="caption">A cute stuffed toy crocodile and a small stuffed toy rabbit on a skateboard. <br> (User provided 2D layout)</h4>
+                <h4 class="caption">In the background, fireworks are bursting. Infront of it, there is a teddy bear dancing slowly within a small area.’.</h4>
             </div>
         </div>
-
-        <div class="col-6">
-            <div class="video-compare-container" style="width: 100%">
-                <video class="video lazy" loop playsinline autoplay muted style="width: 100%">
-                    <source data-src="videos/crocodile_llm.mp4" type="video/mp4"></source>
-                </video>
-                <h4 class="caption">A cute stuffed toy crocodile and a small stuffed toy rabbit on a skateboard. <br> (LLM generated 2D layout)</h4>
-            </div>
         </div>
-    </div>
     </div>
 
     <hr class="divider" />
 
-    <div class="container" style="max-width: 1200px;">
+    <div class="container" style="max-width: 800px;">
         <div class="row">
             <div class="col-md-12">
                 <h2>Abstract</h2>
@@ -159,7 +139,7 @@
             </div>
         </div>
     </div>
-    <div class="container" style="max-width: 1200px;">
+    <div class="container" style="max-width: 800px;">
         <div class="row captioned_videos">
             <div class="col-md-12">
                 <img src="sources/teaser.png" alt="architecture" style="width: 100%">
@@ -170,12 +150,12 @@
     
 
     <hr class="divider" />
-    <div class="container" style="max-width: 1200px;">
+    <div class="container" style="max-width: 800px;">
         <div class="row">
             <div class="col-md-12">
                 <h2>Proposed Framework & Method </h2>
-                <p> Given a 2D layout and text prompt, our coarse 3D generation stage (green box) generates coarse 3D instances along with roughly reasonable layouts. The disentangled refinement stage then refines the 3D layout and enhances individual instance quality by leveraging a collision-aware layout refinement (blue box) followed by an instance-wise refinement (yellow box).</p>
-                <div class="container" style="max-width: 1200px;">
+                <p> Overview of our CoCo4D. We first generate the reference video (initial motion) for both foreground and background, and disentangle them for separate generation, i.e., Dynamic Foreground Generation (Sec. 3.1 in paper) and Dynamic Background Synthesis (Sec. 3.2 in paper). Finally, we precisely compose these two components (Sec. 3.3 in paper) to form our comprehensive and complex target 4D scene.</p>
+                <div class="container" style="max-width: 800px;">
                     <div class="row">
                         <div class="col-md-12">
                         <img src="sources/pipeline.png" alt="architecture" style="width: 100%">
@@ -186,20 +166,36 @@
         </div>
     </div>
 
+    <hr class="divider" />
+    <div class="container" style="max-width: 800px;">
+        <div class="row">
+            <div class="col-md-12">
+                <p> We give a detailed explaination of our progressive outpaint method, which includes an inpaint-project-optimize loop for dynamic background scene expansion.</p>
+                <div class="container" style="max-width: 800px;">
+                    <div class="row">
+                        <div class="col-md-12">
+                        <img src="sources/progressive.png" alt="architecture" style="width: 100%">
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
     <br><br>
                 
     <hr class="divider" />
-    <div class="container" style="max-width: 1200px;">
+    <div class="container" style="max-width: 800px;">
         <div class="row">
             <div class="col-sm-12">
                 <h2>Video</h2>
             </div>
 
-            <div class="container" style="max-width: 1200px;">
+            <div class="container" style="max-width: 800px;">
                 <div class="row captioned_videos">
                     <div class="col-md-12">
                         <div style="position:relative;padding-top:56.25%;">
-                            <iframe src="https://www.youtube.com/embed/aHfpjNwRtsg" allowfullscreen style="position:absolute;top:0;left:0;width:100%;height:100%;"></iframe>
+                            <iframe src="https://www.youtube.com/embed/RMVk1qS8pqM" allowfullscreen style="position:absolute;top:0;left:0;width:100%;height:100%;"></iframe>
                         </div>
                     </div>
                 </div>
@@ -208,60 +204,101 @@
     </div>
 
     <hr class="divider" />
-    <div class="container" style="max-width: 1200px;">
+    <div class="container" style="max-width: 800px;">
         <div class="row">
             <div class="col-sm-12">
-                <h2>Experiments & Main Results</h2>
+                <h2>Additional results and visualizations </h2>
+            </div>
+        </div>
+
+        <div class="container" style="max-width: 800px;">
+            <div class="row">
+                <div class="col-md-12">
+                    <p>
+                        In this part, we first present more 4D scenes generated by our CoCo4D.
+                    </p>
+                </div>
             </div>
         </div>
 
 
-        <div class="container" style="max-width: 1200px;">
+        <div class="container" style="max-width: 800px;">
             <div class="row captioned_videos">
-                <div class="col-md-12">
-                    <p> We evaluate the proposed method make comparisons with other SOTA text-to-3D methods on our collected Compo20 validation set. Layout-Your-3D can generate compositional 3D scenes with higher quality and more reasonable 3D layouts. Note that the first two rows of our results are generated with LLM-grounded 2D layouts, and the last two are generated with user-given 2D layouts. </p>
-                    <img src="sources/comp_main.png" alt="architecture" style="width: 100%">
+            <div class="col-6">
+                <div class="video-compare-container" style="width: 100%">
+                    <video class="video lazy" loop playsinline autoplay muted style="width: 100%">
+                        <source data-src="videos/horse.mp4" type="video/mp4"></source>
+                    </video>
+                    <h4 class="caption">On the table, a toy rocking horse sways back and forth slowly as it inches forward, flashes of lightning in the background.</h4>
                 </div>
+            </div>
+            <div class="col-6">
+                <div class="video-compare-container" style="width: 100%">
+                    <video class="video lazy" loop playsinline autoplay muted style="width: 100%">
+                        <source data-src="videos/astro.mp4" type="video/mp4"></source>
+                    </video>
+                    <h4 class="caption">The astronaut slowly standing up on a rocky planet, with a bright planet and stars twinkling behind him.</h4>
+                </div>
+            </div>
+        </div>
+
+        </div>
+        <div class="container" style="max-width: 800px;">
+            <div class="row captioned_videos">
+            <div class="col-6">
+                <div class="video-compare-container" style="width: 100%">
+                    <video class="video lazy" loop playsinline autoplay muted style="width: 100%">
+                        <source data-src="videos/crab_cropped.mp4" type="video/mp4"></source>
+                    </video>
+                    <h4 class="caption">A hermit crab moves slowly and steadily from left to right across a glistening beach.</h4>
+                </div>
+            </div>
+            <div class="col-6">
+                <div class="video-compare-container" style="width: 100%">
+                    <video class="video lazy" loop playsinline autoplay muted style="width: 100%">
+                        <source data-src="videos/hamster.mp4" type="video/mp4"></source>
+                    </video>
+                    <h4 class="caption">An adorable hamster lounges leisurely on a floatie, sporting stylish sunglasses, drifting across the sparkling sea as gentle waves ripple around it. The hamster stretches contentedly.</h4>
+                </div>
+            </div>
             </div>
         </div>
 
         <br><br>
 
-        <div class="container" style="max-width: 1200px;">
-            <div class="row captioned_videos">
+        <div class="container" style="max-width: 800px;">
+            <div class="row">
                 <div class="col-md-12">
-                    <p> Comparison on the quality of single 3D instance generation. We provide both the short and extended strategy. When lengthening the optimization process, our Layout-Your-3D can generate comparable or even better results than SOTA text-to-3D methods.</p>
-                    <img src="sources/instance_comp.png" alt="architecture" style="width: 100%">
+                    <p>
+                        Moreover, we present some dynamic background scenes only to demonstrate the ability of our CoCo4D in generating comprehensive and complex 4D scenes.
+                    </p>
                 </div>
             </div>
         </div>
 
-        <br><br>
-
-        <div class="container" style="max-width: 1200px;">
+        </div>
+        <div class="container" style="max-width: 800px;">
             <div class="row captioned_videos">
-                <div class="col-md-12">
-                    <p> Examples on the 3D instances refined with custom text prompts. We conduct experiments on both the longer and shorter refinement strategies to validate the effectiveness of customization. </p>
-                    <img src="sources/ablation_customization_a.png" alt="architecture" style="width: 100%">
-                    <img src="sources/ablation_customization_b.png" alt="architecture" style="width: 100%">
+            <div class="col-6">
+                <div class="video-compare-container" style="width: 100%">
+                    <video class="video lazy" loop playsinline autoplay muted style="width: 100%">
+                        <source data-src="videos/bg_anime.mp4" type="video/mp4"></source>
+                    </video>
                 </div>
             </div>
-        </div>
-        
-        <br><br>
-
-        <div class="container" style="max-width: 1200px;">
-            <div class="row captioned_videos">
-                <div class="col-md-12">
-                    <p> Since 3D results are closely related to the reference image, incorporating object insertion into our pipeline would be straightforward. </p>
-                    <img src="sources/object_insertion.png" alt="architecture" style="width: 100%">
+            <div class="col-6">
+                <div class="video-compare-container" style="width: 100%">
+                    <video class="video lazy" loop playsinline autoplay muted style="width: 100%">
+                        <source data-src="videos/bg_hams.mp4" type="video/mp4"></source>
+                    </video>
                 </div>
+            </div>
             </div>
         </div>
     </div>
 
-    <hr class="divider" />
-    <div class="container" style="max-width: 1200px;">
+    <!-- <hr class="divider" />
+    <div class="container" style="max-width: 800px;">
         <div class="row">
             <div class="col-sm-12">
                 <h2>More generated compositional samples</h2>
@@ -315,12 +352,12 @@
     
 
     <hr class="divider" />
-    <div class="container" style="max-width: 1200px;">
+    <div class="container" style="max-width: 800px;">
         <div class="row">
             <div class="col-md-12">
                 <h2> More visualization results. </h2>
                 <h3> Single 3D object generation. </h3>
-                <div class="container" style="max-width: 1200px;">
+                <div class="container" style="max-width: 800px;">
                     <div class="row">
                         <div class="col-md-12">
                         <img src="sources/appendix_instancegen.png" alt="architecture" style="width: 100%">
@@ -332,7 +369,7 @@
         </div>
     </div>
 
-    <div class="container" style="max-width: 1200px;">
+    <div class="container" style="max-width: 800px;">
         <div class="row">
             <div class="col-sm-12">
                 <h3>Custom 3D scene generation.</h3>
@@ -363,26 +400,22 @@
                 </div>
             </div>
         </div>
-    </div>
-
-
-
-    
+    </div> -->
 
     <hr class="divider" />
-    <div class="container" style="max-width: 1200px;">
+    <div class="container" style="max-width: 800px;">
         <div class="row">
             <div class="col-sm-12">
                 <h2>BibTeX</h2>
                 <pre><code>
-                    @misc{zhou2024layoutyour3d,
-                        title={Layout-Your-3D: Controllable and Precise 3D Generation with 2D Blueprint}, 
+                    @misc{zhou2025layoutyour3d,
+                        title={CoCo4D: Comprehensive and Complex 4D Scene Generation}, 
                         author={Junwei Zhou and Xueting Li and Lu Qi and Ming-Hsuan Yang},
-                        year={2024},
-                        eprint={2410.15391},
+                        year={2025},
+                        eprint={2506.19798},
                         archivePrefix={arXiv},
                         primaryClass={cs.CV},
-                        url={https://arxiv.org/abs/2410.15391}, 
+                        url={https://arxiv.org/abs/2506.19798}, 
                   }
                   </code></pre>
             </div>
@@ -391,7 +424,7 @@
 
 
 
-    <div class="container" style="max-width: 1200px;">
+    <div class="container" style="max-width: 800px;">
         <footer>
             <p> Website template from <a href="https://dreamfusion3d.github.io/">DreamFusion</a>. We thank the authors for the open-source code.</p>
         </footer>
