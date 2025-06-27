@@ -134,7 +134,16 @@
             <div class="col-md-12">
                 <h2>Abstract</h2>
                 <p>
-                    We present Layout-Your-3D, a framework that allows controllable and compositional 3D generation from text prompts. Existing text-to-3D methods often struggle to generate assets with plausible object interactions or require tedious optimization processes. To address these challenges, our approach leverages 2D layouts as a blueprint to facilitate precise and plausible control over 3D generation. Starting with a 2D layout provided by a user or generated from a text description, we first create a coarse 3D scene using a carefully designed initialization process based on efficient reconstruction models. To enforce coherent global 3D layouts and enhance the quality of instance appearances, we propose a collision-aware layout optimization process followed by instance-wise refinement. Experimental results demonstrate that Layout-Your-3D yields more reasonable and visually appealing compositional 3D assets while significantly reducing the time required for each prompt. Additionally, Layout-Your-3D can be easily applicable to downstream tasks, such as 3D editing and object insertion.
+                    We propose a framework (dubbed as CoCo4D) for generating detailed
+                    dynamic 4D scenes from text prompts, with the option to include images. Our
+                    method leverages the crucial observation that articulated motion typically charac-
+                    terizes foreground objects, whereas background alterations are less pronounced.
+                    Consequently, CoCo4D divides 4D scene synthesis into two responsibilities: model-
+                    ing the dynamic foreground and creating the evolving background, both directed by
+                    a reference motion sequence.
+                    Extensive experiments show that CoCo4D achieves
+                    comparable or superior performance in 4D scene generation compared to existing
+                    methods, demonstrating its effectiveness and efficiency.
                 </p>
             </div>
         </div>
@@ -289,7 +298,7 @@
             <div class="col-6">
                 <div class="video-compare-container" style="width: 100%">
                     <video class="video lazy" loop playsinline autoplay muted style="width: 100%">
-                        <source data-src="videos/bg_hams.mp4" type="video/mp4"></source>
+                        <source data-src="videos/bg_firework.mp4" type="video/mp4"></source>
                     </video>
                 </div>
             </div>
